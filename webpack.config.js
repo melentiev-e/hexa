@@ -1,9 +1,10 @@
 /* eslint-disable no-undef*/
 var path = require('path')
 var webpack = require('webpack')
+require('babel-polyfill')
 
 module.exports = {
-	entry: './src/main.js',
+	entry: ['babel-polyfill','./src/main.js'],
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		publicPath: '/dist/',
